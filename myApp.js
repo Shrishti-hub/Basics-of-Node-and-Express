@@ -39,6 +39,11 @@ app.get("/:word/echo",function(req,res){
         { "echo" : req.params.word}
     )
 })
+app.get("/name",function(req,res){
+    res.json(
+        { name:  req.query.first+ " " + req.query.last}
+    )
+})
 
 console.log("Hello World");
 
